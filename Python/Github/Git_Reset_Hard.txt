@@ -1,0 +1,52 @@
+PS C:\Users\manisha\OneDrive\Desktop\DSA Practice\DSA_Practice> git log --oneline
+0fc41d5 (HEAD -> main) Coding Practice
+4d666b3 Coding Practice
+1cb9c73 Coding Practice
+e4564cd Coding Practice
+db79aef Coding Practice
+f426800 (origin/dsa_practice_python) Initial commit
+PS C:\Users\manisha\OneDrive\Desktop\DSA Practice\DSA_Practice> git reset --hard 4d666b3
+HEAD is now at 4d666b3 Coding Practice
+PS C:\Users\manisha\OneDrive\Desktop\DSA Practice\DSA_Practice> git status
+On branch main
+Your branch is behind 'origin/main' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Python/GFG/second_largest.py
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\manisha\OneDrive\Desktop\DSA Practice\DSA_Practice> git pull
+Enter passphrase for key '/c/Users/manisha/.ssh/id_ed25519': 
+Updating 4d666b3..28fdc8e
+Fast-forward
+ README.md | 11 +++++++++--
+ 1 file changed, 9 insertions(+), 2 deletions(-)
+PS C:\Users\manisha\OneDrive\Desktop\DSA Practice\DSA_Practice> git add & 'c:\Users\manisha\OneDrive\Desktop\DSA Practice\DSA_Practice\Python\GFG\second_largest.py'
+At line:1 char:9
++ git add & 'c:\Users\manisha\OneDrive\Desktop\DSA Practice\DSA_Practic ...
++         ~
+The ampersand (&) character is not allowed. The & operator is reserved for future use; wrap an ampersand in double quotation marks ("&") to pass it  
+as part of a string.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : AmpersandNotAllowed
+
+PS C:\Users\manisha\OneDrive\Desktop\DSA Practice\DSA_Practice> cd "c:\Users\manisha\OneDrive\Desktop\DSA Practice\DSA_Practice"                     
+PS C:\Users\manisha\OneDrive\Desktop\DSA Practice\DSA_Practice> git add Python\GFG\second_largest.py                                                 
+PS C:\Users\manisha\OneDrive\Desktop\DSA Practice\DSA_Practice> git commit -m "Coding Practice"                                                      
+[main 7b3e25a] Coding Practice
+ 1 file changed, 44 insertions(+)
+ create mode 100644 Python/GFG/second_largest.py
+PS C:\Users\manisha\OneDrive\Desktop\DSA Practice\DSA_Practice> git push
+Enter passphrase for key '/c/Users/manisha/.ssh/id_ed25519': 
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 906 bytes | 906.00 KiB/s, done.
+Total 5 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:mannu-3935/DSA_Practice.git
+   28fdc8e..7b3e25a  main -> main
+PS C:\Users\manisha\OneDrive\Desktop\DSA Practice\DSA_Practice> 
