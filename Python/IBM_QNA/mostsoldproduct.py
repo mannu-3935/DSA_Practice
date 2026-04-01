@@ -8,13 +8,28 @@ Input & output are in  stdin and stdout respectively
 n=number of products
 
 '''
-
-from tifffile import product
-
-
 products1 = ["redShirt","greenPants", "redShirt", "orangeShoes", "blackPants"]     #redShirt=2 -> redShirt = featured product
 products2 = ["yellowShirt","redHat","blackShirt", "bluePants", "redHat", "pinkHat","blackShirt","yellowShirt","greenPants","greenPants"]     #yellowShirt=2, blackShirt=2,redHat=2, greenPants=2, A-Z order ->yellowShirt = featured product
 
+#brute force approach
+def featured_product(products):
+    freq={}
+
+    for p in products:
+        if p in freq:
+            freq[p] += 1    
+        else:
+            freq[p] = 1
+
+    max_freq = max(freq.values())
+    final = []
+    for p, count in freq.items():
+        if count == max_freq:
+            final.append(p)
+    final.sort()
+    return final[-1]
+
+'''#Efficient approach
 def featured_product(products):
     freq={}
 
@@ -25,6 +40,7 @@ def featured_product(products):
     final = [p for p  in freq if freq[p] == max_freq]
     final.sort()
     return final[-1]
+'''
 
 '''
 if __name__ == "__main__":
